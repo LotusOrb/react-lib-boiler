@@ -1,0 +1,9 @@
+# Ignore config file
+.babelrc
+jest.config.js
+.eslintrc.js
+rollup.config.js
+
+# glob for file
+dist
+**/*.test.tsx

@@ -1,0 +1,1 @@
+export { TypographyP } from "./TyphographyP";
