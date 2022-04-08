@@ -19,7 +19,7 @@
 		"build": "rollup -c",
 		"test": "jest -o",
 		"test:cov": "jest --coverage",
-		"test:watch": "jest --coverage --watch",
+		"test:watch": "jest -o --watch",
 		"lint": "eslint -c .eslintrc.js ./src/**/*.{tsx,ts} --color",
 		"lint:fix": "eslint -c .eslintrc.js ./src/**/*.{tsx,ts} --color --fix",
 		"storybook": "start-storybook -p 6006",
