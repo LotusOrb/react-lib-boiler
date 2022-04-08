@@ -17,9 +17,9 @@
 	"scripts": {
 		"prepublishOnly": "npm run build",
 		"build": "rollup -c",
-		"test": "jest -o",
-		"test:cov": "jest --coverage",
-		"test:watch": "jest -o --watch",
+		"test": "jest -o --colors",
+		"test:cov": "jest --coverage --colors",
+		"test:watch": "jest -o --watch --colors",
 		"lint": "eslint -c .eslintrc.js ./src/**/*.{tsx,ts} --color",
 		"lint:fix": "eslint -c .eslintrc.js ./src/**/*.{tsx,ts} --color --fix",
 		"storybook": "start-storybook -p 6006",
