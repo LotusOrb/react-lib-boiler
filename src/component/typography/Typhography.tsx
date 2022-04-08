@@ -43,7 +43,7 @@ export const Typography: React.FC<TypographyProps> = React.memo((props) => {
 	);
 });
 
-Typography.displayName = "Typography";
+Typography.displayName = "TypographyA";
 
 Typography.defaultProps = {
 	type: "paragraph",
