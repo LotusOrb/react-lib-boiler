@@ -3,5 +3,16 @@
         "@babel/preset-env",
         "@babel/preset-react",
         "@babel/preset-typescript"
+    ],
+    "plugins": [
+        [
+            "babel-plugin-styled-components",
+            {
+                "namespace": "lotusorb",
+                "fileName": false,
+                "ssr": true,
+                "displayName": false
+            }
+        ]
     ]
 }

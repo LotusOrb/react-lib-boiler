@@ -3,7 +3,10 @@
 jest.config.js
 .eslintrc.js
 rollup.config.js
+tsconfig.json
 
 # glob for file
 dist
-**/*.test.tsx
+node_modules
+coverage
+.vscode

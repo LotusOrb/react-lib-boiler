@@ -1,1 +1,1 @@
-export { TypographyP } from "./component/typography";
+export { Typography } from "./component/typography";
