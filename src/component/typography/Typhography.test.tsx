@@ -41,4 +41,16 @@ describe("<TyphographyP />", () => {
 
 		expect(elm).toHaveTextContent(textString);
 	});
+
+	it("should render diferent color", () => {
+		render(
+			<Typography type="h2" color="blue">
+				{textString}
+			</Typography>
+		);
+
+		const elm = document.querySelector("h2");
+
+		expect(elm).toHaveStyleRule("color", "blue");
+	});
 });
