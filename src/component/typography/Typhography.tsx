@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Styled, { css } from "styled-components";
 
-interface TypographyProps
+export interface TypographyProps
 	extends React.HTMLProps<HTMLParagraphElement | HTMLHeadElement> {
 	type?: "paragraph" | "h1" | "h2" | "test";
 	color?: string;

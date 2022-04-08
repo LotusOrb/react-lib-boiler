@@ -25,11 +25,6 @@
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "npm run eslint"
-		}
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/LotusOrb/react-lib-boiler.git"
