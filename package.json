@@ -15,7 +15,7 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "postinstall": "husky install",
+    "prepare": "npm run build & husky install",
     "build": "rollup -c",
     "test": "jest",
     "test:cov": "jest --coverage",
