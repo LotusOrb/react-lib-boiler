@@ -1,5 +1,5 @@
 import React from "react";
-import { fireEvent, render } from "@testing-library/react";
+import { render } from "@testing-library/react";
 import { Typography } from "./Typhography";
 import { act } from "react-dom/test-utils";
 
