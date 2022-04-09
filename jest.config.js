@@ -2,8 +2,11 @@
 const config = {
 	name: "Boiler",
 	testEnvironment: "jest-environment-jsdom",
+	moduleNameMapper:{
+		".(css|less|scss)$": "identity-obj-proxy"
+	},
 	verbose: true,
-	testMatch: ["<rootDir>/src/**/*.test.tsx"],
+	testMatch: ["<rootDir>/src/**/*.test.{tsx,ts}"],
 	setupFilesAfterEnv: [
 		"@testing-library/jest-dom/extend-expect",
 		"./src/setupTest.ts",

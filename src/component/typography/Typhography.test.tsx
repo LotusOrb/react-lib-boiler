@@ -3,7 +3,7 @@ import { fireEvent, render } from "@testing-library/react";
 import { Typography } from "./Typhography";
 import { act } from "react-dom/test-utils";
 
-describe("<TyphographyP />", () => {
+describe("<Typhography />", () => {
 	const textString = "Typography";
 
 	it("should render default props", () => {
@@ -30,26 +30,16 @@ describe("<TyphographyP />", () => {
 		expect(elm).toHaveTextContent(textString);
 	});
 
-	it("should render test", async () => {
-		render(<Typography type="test">{textString}</Typography>);
-
-		const elm = document.querySelector("p");
-
+	it("should render diferent color", async () => {
 		await act(async () => {
-			fireEvent.click(elm || window);
+			render(
+				<Typography type="paragraph" color="blue">
+					{textString}
+				</Typography>
+			);
 		});
 
-		expect(elm).toHaveTextContent(textString);
-	});
-
-	it("should render diferent color", () => {
-		render(
-			<Typography type="h2" color="blue">
-				{textString}
-			</Typography>
-		);
-
-		const elm = document.querySelector("h2");
+		const elm = document.querySelector("p");
 
 		expect(elm).toHaveStyleRule("color", "blue");
 	});

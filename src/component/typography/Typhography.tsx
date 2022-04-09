@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Styled, { css } from "styled-components";
 
 export interface TypographyProps
 	extends React.HTMLProps<HTMLParagraphElement | HTMLHeadElement> {
-	type?: "paragraph" | "h1" | "h2" | "test";
+	type?: "paragraph" | "h1" | "h2";
 	color?: string;
 }
 
@@ -14,6 +14,7 @@ const sharedStyle = css<{ color: string }>`
 
 const Paragraph = Styled.p`
 	${sharedStyle}
+	color: ${(props) => (props.color ? props.color : "red")};
 `;
 
 const H1 = Styled.h1`
@@ -25,25 +26,16 @@ const H2 = Styled.h2`
 `;
 
 export const Typography: React.FC<TypographyProps> = React.memo((props) => {
-	const [state, setState] = useState<boolean>(false);
-
-	useEffect(() => {
-		setState(true);
-	}, []);
-
 	return (
 		<React.Fragment>
 			{props.type === "paragraph" && <Paragraph {...(props as never)} />}
 			{props.type === "h1" && <H1 {...(props as never)} />}
 			{props.type === "h2" && <H2 {...(props as never)} />}
-			{props.type === "test" && state && (
-				<Paragraph {...(props as never)} onClick={() => setState(true)} />
-			)}
 		</React.Fragment>
 	);
 });
 
-Typography.displayName = "TypographyA";
+Typography.displayName = "LotusOrb_Typography";
 
 Typography.defaultProps = {
 	type: "paragraph",
