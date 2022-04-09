@@ -1,6 +1,7 @@
 {
 	"compilerOptions": {
 		"target": "ES5",
+		"lib": ["ES5", "ES6", "DOM"],
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
 		"strict": true,
@@ -13,5 +14,6 @@
 		"allowSyntheticDefaultImports": true,
 		"declaration": true,
 		"declarationDir": "types",
+		"declarationMap": true
 	}
 }
